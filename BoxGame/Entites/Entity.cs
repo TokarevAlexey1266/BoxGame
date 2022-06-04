@@ -76,8 +76,6 @@ namespace BoxGame.Entites
         
         public void PlayAnimation(Graphics g)
         {
-            
-
             if (currentFrame < currentLimit - 1)
                 currentFrame++;
             else currentFrame = 0;

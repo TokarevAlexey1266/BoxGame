@@ -34,7 +34,7 @@ namespace BoxGame.Controllers
         {
             return new int[,] {
                 { 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
-                { 8,1,4,1,1,1,5,1,1,1,1,3,6,1,7,5,2},
+                { 8,5,4,1,1,1,5,1,1,1,1,3,6,1,7,5,2},
                 { 2,1,4,1,1,44,7,4,3,4,4,4,44,1,4,7,2},
                 { 2,1,1,1,1,3,1,4,1,1,1,1,1,1,1,1,2},
                 { 2,7,4,44,4,4,1,1,1,7,44,4,5,1,44,1,2},
@@ -113,20 +113,17 @@ namespace BoxGame.Controllers
                     if (map[i, j] == 5)//трава1
                     {
                         g.DrawImage(spriteSheet, new Rectangle(new Point(j*cellSize, i*cellSize), new Size(cellSize*1/3, cellSize*1/3)), 847, 55, 78, 72, GraphicsUnit.Pixel);
-                        //MapEntity mapEntity = new MapEntity(new Point(j*cellSize, i*cellSize), new Size(cellSize*2/3, cellSize*2/3));
-                        //mapObjects.Add(mapEntity);
+                        
                     }else
                     if (map[i, j] == 6)//трава2
                     {
                         g.DrawImage(spriteSheet, new Rectangle(new Point(j*cellSize, i*cellSize), new Size(cellSize*1/3, cellSize*1/3)), 930, 50, 76, 37, GraphicsUnit.Pixel);
-                        //MapEntity mapEntity = new MapEntity(new Point(j*cellSize, i*cellSize), new Size(cellSize*2/3, cellSize*2/3));
-                        //mapObjects.Add(mapEntity);
+                        
                     }else
                     if (map[i, j] == 8)//табличка
                     {
                         g.DrawImage(spriteSheet, new Rectangle(new Point(j*cellSize, i*cellSize), new Size(cellSize*3/4, cellSize*3/4)), 1008, 224, 77, 78, GraphicsUnit.Pixel);
-                        //MapEntity mapEntity = new MapEntity(new Point(j*cellSize, i*cellSize), new Size(cellSize*3/4, cellSize*3/4));
-                        //mapObjects.Add(mapEntity);
+                        
                     }
                 }
             }

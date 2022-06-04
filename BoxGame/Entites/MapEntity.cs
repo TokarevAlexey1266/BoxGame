@@ -48,8 +48,6 @@ namespace BoxGame.Entites
             position.X += dirX;
             position.Y += dirY;
         }
-
-
     }   
 
     public enum MapEntityType

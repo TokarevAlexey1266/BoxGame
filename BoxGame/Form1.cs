@@ -103,12 +103,6 @@ namespace BoxGame
                 player.isMoving = false;
                 player.SetAnimationConfiguration(0);
             }
-           
-
-            //player.dirX = 0;
-            //player.dirY = 0;
-            //player.isMoving = false;
-            //player.SetAnimationConfiguration(0);
         }
 
         public void OnPress(object sender,KeyEventArgs e)
@@ -154,14 +148,8 @@ namespace BoxGame
         }
         public void Update(object sender, EventArgs e)
         {
-            //PhysicsController.IsCollide(player);
-            if (!PhysicsController.IsCollide(player,new Point(player.dirX, player.dirY)))
-            {
-                if (player.isMoving)
-                    player.Move();
-            }
-
-
+            if (player.isMoving)
+            player.Move();
             Invalidate();
         }
 
@@ -173,10 +161,6 @@ namespace BoxGame
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-
-            
-            //mapController.DrawMap(g);
-            //player.PlayAnimation(g);
         }
 
         public static void ShowExitPanel()
